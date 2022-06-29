@@ -1,0 +1,7 @@
+.idea
+*.pyc
+__pycache__
+.local_env
+venv
+src/app/reviewer
+src/worker/tasks_reviewer.py
