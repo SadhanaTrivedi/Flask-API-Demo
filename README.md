@@ -1,5 +1,5 @@
 The app consists of a Flask web API which makes it possible to obtain details about a given company from a third party provider (Clearbit)
-and expose the obtained details to app clients.    
+and expose the obtained details to app clients.
 The app uses a worker process so that the 3rd party requests are not blocking. Redis is used to 1) fasciliate communnication
 between the app and the worker  2) store results from Clearbit.
 
@@ -27,17 +27,9 @@ The information to fetch from Clearbit and return as part of the response from t
 * number of employees  in the company
 * age of the company (based on founded date)
 
-# Your task:
-Mandatory requirements:
+
+Third Party APi:
 - Sign up to the clearbit API (https://clearbit.com/docs#api-reference)
-- extend the `docker-compose.yml` file to include a redis container accessible on port 6379  (container should to be accessible from your host machine too)
-- implement the above two endpoints + the logic to query Clearbit + store/retrieve data via redis
-- ensure you follow best development practices
-- api keys are not stored as plain text in the app code
-- unit tests are written. You are free to use any testing library you choose to - the example tests can be changed.
-- solution can be tested by us via 
-    - `make test-docker`
-    - `make start-all-docker` & making requests to the flask app
 
 # Run / Develop tips
 * There's a `docker-compose.yml` file which has container definitions for the flask app & worker process. With docker-compose you can quickly launch docker containers
